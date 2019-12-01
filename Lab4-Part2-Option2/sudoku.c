@@ -138,7 +138,7 @@ int main() {
     // 4. Wait for all threads to finish.
     int close_th_index = 0;
 	for (int t = 0; t < 36; t++) {
-		pthread_join(close_th_index, NULL);
+		pthread_join(thread_ids[close_th_index], NULL);
 		th_list_index++;
 	}
     
